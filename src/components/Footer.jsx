@@ -1,33 +1,38 @@
 import React from 'react';
-import { FaFacebookF } from "react-icons/fa6";
+import { FaFacebookF } from "react-icons/fa";
 import { SiInstagram } from "react-icons/si";
 import { FaTwitter } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className=' flex bg-black h-[40vh] mt-10'>
-        <div className=' relative bg-[#E1EED0] mt-40 ml-60 rounded-full h-[5vh] w-[5vh] flex justify-center pt-4'><FaFacebookF /></div>
-        <div className=' relative bg-[#E1EED0] mt-40 ml-8 rounded-full h-[5vh] w-[5vh] flex justify-center pt-4'><SiInstagram /></div>
-        <div className=' relative bg-[#E1EED0] mt-40 ml-8 rounded-full h-[5vh] w-[5vh] flex justify-center pt-4'><FaTwitter /></div>
-        <div className='flex-col relative text-white mt-10 ml-[48vh] '>
-            <p className='font-bold text-3xl mb-5 '>SERVICES</p>
-            <p>Waste Management</p>
-            <p>E-waste EPR</p>
-            <p>Plastic waste EPR</p>
-            <p>Battery waste EPR</p>
-            <p>Tyre waste EPR</p>
-            <p>Recycler Registration</p>
-            <p>CGWA NOC</p>
-            <p>UPGWD NOC</p>
-            <p>HWRA NOC</p>
-            <p>BIS, WPC, ISO</p>
+    <div className='bg-black py-10'>
+      <div className='container mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-around'>
+        <div className='flex justify-center lg:justify-start space-x-6 mb-10 lg:mb-0'>
+          <div className='bg-[#E1EED0] rounded-full h-12 w-12 flex items-center justify-center'><FaFacebookF /></div>
+          <div className='bg-[#E1EED0] rounded-full h-12 w-12 flex items-center justify-center'><SiInstagram /></div>
+          <div className='bg-[#E1EED0] rounded-full h-12 w-12 flex items-center justify-center'><FaTwitter /></div>
         </div>
-        <div className='flex-col relative text-white mt-10 ml-[48vh] '>
-            <p className='font-bold text-3xl mb-5 '>Contact US</p>
-            
+        <div className='text-white text-center lg:text-left mb-10 lg:mb-0'>
+          <p className='font-bold text-2xl mb-5'>SERVICES</p>
+          <ul className='space-y-2'>
+            <li>Waste Management</li>
+            <li>E-waste EPR</li>
+            <li>Plastic waste EPR</li>
+            <li>Battery waste EPR</li>
+            <li>Tyre waste EPR</li>
+            <li>Recycler Registration</li>
+            <li>CGWA NOC</li>
+            <li>UPGWD NOC</li>
+            <li>HWRA NOC</li>
+            <li>BIS, WPC, ISO</li>
+          </ul>
         </div>
+        <div className='text-white text-center lg:text-left'>
+          <p className='font-bold text-2xl mb-5'>CONTACT US</p>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

@@ -9,70 +9,32 @@ import Six from "../assets/OurServices/6img.jpeg"
 
 function OurServices() {
   return (
-    <div>
-        <div className="flex justify-center w-full font-bold text-4xl mb-10">Ou <span className="underline decoration-gray-400">r Servic</span> es</div>
-        <div className="flex justify-center items-center w-full mb-10">
-            <a href="#">
-                <div className=" shadow-lg bg-black-900 w-[40vh] h-[40vh] flex flex-col ml-10 mr-10 rounded-lg overflow-hidden">
-                    <img className="w-full h-3/4 object-cover" src={One} alt="One" />
-                    <div className="bg-green-300 p-2 rounded-b-lg">
-                        <p className='font-bold text-2xl'>Waste Management</p>
-                        <p className='flex'>Know More <span className='flex pt-1 ml-2'><FaArrowRight /></span></p>
-                    </div>
-                </div>
-            </a>
-            <a href="#">
-                <div className=" shadow-lg bg-black-900 w-[40vh] h-[40vh] flex flex-col ml-10 mr-10 rounded-lg overflow-hidden">
-                    <img className="w-full h-3/4 object-cover" src={Two} alt="Two" />
-                    <div className="bg-green-300 p-2 rounded-b-lg">
-                        <p className='font-bold text-2xl'>E-waste EPR</p>
-                        <p className='flex'>Know More <span className='flex pt-1 ml-2'><FaArrowRight /></span></p>
-                    </div>
-                </div>
-            </a>
-            <a href="#">
-                <div className=" shadow-lg bg-black-900 w-[40vh] h-[40vh] flex flex-col ml-10 mr-10 rounded-lg overflow-hidden">
-                    <img className="w-full h-3/4 object-cover" src={Three} alt="Three" />
-                    <div className="bg-green-300 p-2 rounded-b-lg">
-                        <p className='font-bold text-2xl'>Plastic waste EPR</p>
-                        <p className='flex'>Know More <span className='flex pt-1 ml-2'><FaArrowRight /></span></p>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div className="flex justify-center items-center w-full">
-            <a href="#">
-                <div className=" shadow-lg bg-black-900 w-[40vh] h-[40vh] flex flex-col ml-10 mr-10 rounded-lg overflow-hidden">
-                    <img className="w-full h-3/4 object-cover" src={Four} alt="Four" />
-                    <div className="bg-green-300 p-2 rounded-b-lg">
-                        <p className='font-bold text-2xl'>Battery waste EPR</p>
-                        <p className='flex'>Know More <span className='flex pt-1 ml-2'><FaArrowRight /></span></p>
-                    </div>
-                </div>
-            </a>
-            <a href="#">
-                <div className=" shadow-lg bg-black-900 w-[40vh] h-[40vh] flex flex-col ml-10 mr-10 rounded-lg overflow-hidden">
-                    <img className="w-full h-3/4 object-cover" src={Five} alt="Five" />
-                    <div className="bg-green-300 p-2 rounded-b-lg">
-                        <p className='font-bold text-2xl'>Tyre waste EPR</p>
-                        <p className='flex'>Know More <span className='flex pt-1 ml-2'><FaArrowRight /></span></p>
-                    </div>
-                </div>
-            </a>
-            <a href="#">
-                <div className=" shadow-lg bg-black-900 w-[40vh] h-[40vh] flex flex-col ml-10 mr-10 rounded-lg overflow-hidden">
-                    <img className="w-full h-3/4 object-cover" src={Six} alt="Six" />
-                    <div className="bg-green-300 p-2 rounded-b-lg">
-                        <p className='font-bold text-2xl'>Recyler Registration</p>
-                        <p className='flex'>Know More <span className='flex pt-1 ml-2'><FaArrowRight /></span></p>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div className='flex justify-center mt-10'>
-            <div className='font-bold text-3xl'>More</div>
-            <div className='flex justify-center items-center ml-3 size'><FaArrowRight /></div>
-        </div>
+    <div className="p-4">
+      <div className="flex justify-center w-full font-bold text-2xl sm:text-3xl md:text-4xl mb-10">
+        Ou <span className="underline decoration-gray-400">r Servic</span> es
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+        {[
+          { img: One, title: "Waste Management" },
+          { img: Two, title: "E-waste EPR" },
+          { img: Three, title: "Plastic waste EPR" },
+          { img: Four, title: "Battery waste EPR" },
+          { img: Five, title: "Tyre waste EPR" },
+          { img: Six, title: "Recycler Registration" }
+        ].map((service, index) => (
+          <a href="#" key={index} className="shadow-lg bg-black-900 rounded-lg overflow-hidden">
+            <img className="w-full h-48 sm:h-64 object-cover" src={service.img} alt={service.title} />
+            <div className="bg-green-300 p-4 rounded-b-lg">
+              <p className='font-bold text-xl sm:text-2xl'>{service.title}</p>
+              <p className='flex'>Know More <span className='flex pt-1 ml-2'><FaArrowRight /></span></p>
+            </div>
+          </a>
+        ))}
+      </div>
+      <div className='flex justify-center mt-10'>
+        <div className='font-bold text-xl sm:text-2xl md:text-3xl'>More</div>
+        <div className='flex justify-center items-center ml-3'><FaArrowRight /></div>
+      </div>
     </div>
   )
 }

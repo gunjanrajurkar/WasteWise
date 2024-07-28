@@ -3,80 +3,34 @@ import { FaArrowRight } from "react-icons/fa";
 import Eight from "../assets/Testimonials/8img.jpeg";
 
 function Testimonials() {
+  const testimonials = [
+    { text: "I've been using their service for over a year and couldn't be happier. They are always on time and very reliable. Highly recommend!", name: "John Doe", img: Eight },
+    { text: "I've been using their service for over a year and couldn't be happier. They are always on time and very reliable. Highly recommend!", name: "John Doe", img: Eight },
+    { text: "I've been using their service for over a year and couldn't be happier. They are always on time and very reliable. Highly recommend!", name: "John Doe", img: Eight },
+    { text: "I've been using their service for over a year and couldn't be happier. They are always on time and very reliable. Highly recommend!", name: "John Doe", img: Eight },
+    { text: "I've been using their service for over a year and couldn't be happier. They are always on time and very reliable. Highly recommend!", name: "John Doe", img: Eight },
+    { text: "I've been using their service for over a year and couldn't be happier. They are always on time and very reliable. Highly recommend!", name: "John Doe", img: Eight },
+  ];
+
   return (
-    <div className='mt-10'>
-      <div className="flex justify-center w-full font-bold text-4xl mb-10">
+    <div className='mt-10 p-4'>
+      <div className="flex justify-center w-full font-bold text-2xl sm:text-3xl md:text-4xl mb-10">
         Te <span className="underline decoration-gray-400">stimonia</span>ls
       </div>
-      <div className="flex justify-center items-center w-full mb-10">
-        <a href="#">
-          <div className="drop-shadow-lg bg-black-900 w-[40vh] h-[40vh] flex flex-col ml-10 mr-10 rounded-lg overflow-hidden relative ">
-            <img className="object-cover absolute w-40 h-40 rounded-full bg-white p-2 ml-24 top-[10px]" src={Eight} alt="Eight" />
-            <div className='pt-20 h-full flex items-center justify-center'>
-              <div className='bg-[#E1EED0] p-5 w-full h-full flex-col pt-28 items-center justify-center rounded-lg'>
-                <p className='text-center text-sm'>I've been using their service for over a year and couldn't be happier. They are always on time and very reliable. Highly recommend!</p>
-                <p className='text-center text-3xl mt-10'>John Doe</p>
-              </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+        {testimonials.map((testimonial, index) => (
+          <a href="#" key={index} className="drop-shadow-lg bg-black-900 rounded-lg overflow-hidden relative flex flex-col items-center">
+            <img className="object-cover w-40 h-40 rounded-full bg-white p-2 mt-5" src={testimonial.img} alt="Testimonial" />
+            <div className='bg-[#E1EED0] p-5 w-full flex flex-col items-center mt-10 rounded-lg'>
+              <p className='text-center text-sm'>{testimonial.text}</p>
+              <p className='text-center text-xl sm:text-2xl md:text-3xl mt-5'>{testimonial.name}</p>
             </div>
-          </div>
-        </a>
-        <a href="#">
-          <div className="drop-shadow-lg bg-black-900 w-[40vh] h-[40vh] flex flex-col ml-10 mr-10 rounded-lg overflow-hidden relative">
-            <img className="object-cover absolute w-40 h-40 rounded-full bg-white p-2 ml-24 top-[10px]" src={Eight} alt="Eight" />
-            <div className='pt-20 h-full flex items-center justify-center'>
-              <div className='bg-[#E1EED0] p-5 w-full h-full flex-col pt-28 items-center justify-center rounded-lg'>
-                <p className='text-center text-sm'>I've been using their service for over a year and couldn't be happier. They are always on time and very reliable. Highly recommend!</p>
-                <p className='text-center text-3xl mt-10'>John Doe</p>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="#">
-          <div className="drop-shadow-lg bg-black-900 w-[40vh] h-[40vh] flex flex-col ml-10 mr-10 rounded-lg overflow-hidden relative">
-            <img className="object-cover absolute w-40 h-40 rounded-full bg-white p-2 ml-24 top-[10px]" src={Eight} alt="Eight" />
-            <div className='pt-20 h-full flex items-center justify-center'>
-              <div className='bg-[#E1EED0] p-5 w-full h-full flex-col pt-28 items-center justify-center rounded-lg'>
-                <p className='text-center text-sm'>I've been using their service for over a year and couldn't be happier. They are always on time and very reliable. Highly recommend!</p>
-                <p className='text-center text-3xl mt-10'>John Doe</p>
-              </div>
-            </div>
-          </div>
-        </a>
+          </a>
+        ))}
       </div>
-      <div className="flex justify-center items-center w-full">
-        <a href="#">
-          <div className="drop-shadow-lg bg-black-900 w-[40vh] h-[40vh] flex flex-col ml-10 mr-10 rounded-lg overflow-hidden relative">
-            <img className="object-cover absolute w-40 h-40 rounded-full bg-white p-2 ml-24 top-[10px]" src={Eight} alt="Eight" />
-            <div className='pt-20 h-full flex items-center justify-center'>
-              <div className='bg-[#E1EED0] p-5 w-full h-full flex-col pt-28 items-center justify-center rounded-lg'>
-                <p className='text-center text-sm'>I've been using their service for over a year and couldn't be happier. They are always on time and very reliable. Highly recommend!</p>
-                <p className='text-center text-3xl mt-10'>John Doe</p>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="#">
-          <div className="drop-shadow-lg bg-black-900 w-[40vh] h-[40vh] flex flex-col ml-10 mr-10 rounded-lg overflow-hidden relative">
-            <img className="object-cover absolute w-40 h-40 rounded-full bg-white p-2 ml-24 top-[10px]" src={Eight} alt="Eight" />
-            <div className='pt-20 h-full flex items-center justify-center'>
-              <div className='bg-[#E1EED0] p-5 w-full h-full flex-col pt-28 items-center justify-center rounded-lg'>
-                <p className='text-center text-sm'>I've been using their service for over a year and couldn't be happier. They are always on time and very reliable. Highly recommend!</p>
-                <p className='text-center text-3xl mt-10'>John Doe</p>
-              </div>
-            </div>
-          </div>
-        </a>
-        <a href="#">
-          <div className="drop-shadow-lg bg-black-900 w-[40vh] h-[40vh] flex flex-col ml-10 mr-10 rounded-lg overflow-hidden relative">
-            <img className="object-cover absolute w-40 h-40 rounded-full bg-white p-2 ml-24 top-[10px]" src={Eight} alt="Eight" />
-            <div className='pt-20 h-full flex items-center justify-center'>
-              <div className='bg-[#E1EED0] p-5 w-full h-full flex-col pt-28 items-center justify-center rounded-lg'>
-                <p className='text-center text-sm'>I've been using their service for over a year and couldn't be happier. They are always on time and very reliable. Highly recommend!</p>
-                <p className='text-center text-3xl mt-10'>John Doe</p>
-              </div>
-            </div>
-          </div>
-        </a>
+      <div className='flex justify-center mt-10'>
+        <div className='font-bold text-xl sm:text-2xl md:text-3xl'>More</div>
+        <div className='flex justify-center items-center ml-3'><FaArrowRight /></div>
       </div>
     </div>
   )
