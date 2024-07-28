@@ -1,9 +1,10 @@
 import React from 'react'
+import Background from "../assets/hero.webp"
 
 function Hero() {
   return (
-    <div className="flex justify-center items-top w-full h-[93vh] p-4 md:p-9 md:pt-10 mt-20">
-      <div className="relative bg-[url('../assets/hero.webp')] bg-no-repeat bg-center bg-cover h-[60vh] sm:h-[70vh] md:h-[80vh] w-full rounded border-none flex justify-center items-center flex-col">
+    <div className="flex justify-center items-top w-full h-[93vh] p-4 md:p-9 md:pt-10 mt-20" style={{ backgroundImage: url(${Background}) }}>
+      <div className="relative bg-no-repeat bg-center bg-cover h-[60vh] sm:h-[70vh] md:h-[80vh] w-full rounded border-none flex justify-center items-center flex-col">
         <div className="absolute inset-0 bg-black opacity-50 rounded"></div>
         <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold text-center p-2 sm:p-3 md:p-4 relative">Your Partner in Sustainable</h1>
         <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold text-center p-2 sm:p-3 md:p-4 relative">Waste Disposal</h1>
